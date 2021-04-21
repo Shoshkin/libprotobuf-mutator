@@ -191,9 +191,7 @@ class ConstFieldInstance {
   }
 
   bool EnforceUtf8() const {
-    return descriptor_->type() == protobuf::FieldDescriptor::TYPE_STRING &&
-           descriptor()->file()->syntax() ==
-               protobuf::FileDescriptor::SYNTAX_PROTO3;
+    return descriptor_->type() == protobuf::FieldDescriptor::TYPE_STRING;
   }
 
   const protobuf::FieldDescriptor* descriptor() const { return descriptor_; }
